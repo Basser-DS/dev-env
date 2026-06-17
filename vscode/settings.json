@@ -1,5 +1,13 @@
 {
     /* ----------------
+        VS Code Editor
+       ---------------- */
+    "editor.detectIndentation": true, // ファイルのインデントを自動判断
+    "editor.insertSpaces": true, // Tab をスペースに変換
+    "editor.tabSize": 4, // 既定のインデント幅
+    "editor.formatOnSave": true, // 保存時に自動整形
+    "editor.formatOnPaste": true, // 貼り付け時のインデント調整
+    /* ----------------
         Latex Workshop
        ---------------- */
     "latex-workshop.latex.recipes": [
@@ -7,24 +15,31 @@
             "name": "latexmk",
             "tools": [
                 "latexmk-lualatex"
-                ]
-                }
-            ],
+            ]
+        }
+    ],
     "latex-workshop.latex.tools": [
         {
-    "name": "latexmk-lualatex",
-    "command": "latexmk",
-    "args": [
-        "-lualatex",
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
-        ]
+            "name": "latexmk-lualatex",
+            "command": "latexmk",
+            "args": [
+                "-lualatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
         }
-        ],
-    "latex-workshop.latex.outDir": "",  
-    "latex-workshop.latex.autoBuild.run": "onSave", 
+    ],
+    "latex-workshop.latex.outDir": "",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "[latex]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
     /* ---------------------
         Jupyter Notebook 他
        --------------------- */
