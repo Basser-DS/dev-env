@@ -18,29 +18,48 @@
 			"% itemizeの記号",
 			"\\usepackage{enumitem}",
 			"\\setlist[itemize]{label=\\textbullet}",
-			"% その他",
+			"% 図表",
+			"\\usepackage{caption}",
+			"\\usepackage{threeparttable} % 脚注",
 			"\\usepackage{booktabs} % 罫線を引く",
 			"\\usepackage{colortbl} % 表組の色",
+			"% 問題環境",
+			"\\newenvironment{problem}[1]",
+			"{",
+			"\\par\\noindent",
+			"\\textbf{#1}",
+			"\\par",
+			"}",
+			"{",
+			"\\par",
+			"}",
+			"% 解答環境",
+			"\\newenvironment{answer}",
+			"{\\par\\noindent\\textbf{解答}",
+			"\\par",
+			"}",
+			"{\\hfill$\\square$\\par",
+			"}",
+			"%その他",
 			"\\usepackage{url} % URL貼り付け",
 			"\\definecolor{processblue}{cmyk}{0.96,0,0,0}",
-			"\\usepackage{caption}",
 			"%\\captionsetup[figure]{font=scriptsize} % figureキャプションサイズの調整",
 			"% グラフが必要なとき",
 			"% \\usepackage{tikz}",
 			"% \\usetikzlibrary{patterns}",
 			"% \\usetikzlibrary{positioning}",
-			"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+			"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
 			"\\begin{document}",
 			"\\begin{flushright}",
 			"\\today 作成 \\\\\\\\",
 			"course name\\\\\\\\",
-			"name",
+			"name \\\\\\\\",
 			"student ID",
 			"\\end{flushright}",
 			"\\begin{center}",
 			"{\\Large title}",
 			"\\end{center}",
-			"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+			"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
 			"\\part*{}",
 			"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
 			"\\section*{}",
@@ -114,7 +133,7 @@
 		"description": "発表用スライドテンプレート"
 	},
 	"figure": {
-		"prefix": "figre",
+		"prefix": "figure",
 		"body": [
 			"\\begin{figure}",
 			"\\centering",
@@ -155,6 +174,15 @@
 		"prefix": "argm",
 		"body": [
 			"\\underset{} {\\operatorname{arg}}"
+		]
+	},
+	"prob-ans": {
+		"prefix": "prob-ans",
+		"body": [
+			"\\begin{problem}{}",
+			"\\end{problem}",
+			"\\begin{answer}",
+			"\\end{answer}"
 		]
 	}
 }
